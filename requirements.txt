@@ -1,0 +1,15 @@
+pytesseract
+matplotlib
+ultralytics
+opencv-python
+numpy
+Pillow
+torch
+torchvision
+tqdm
+pyyaml
+requests
+pandas
+seaborn
+facenet-pytorch
+scikit-learn
