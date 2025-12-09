@@ -3,8 +3,8 @@ from ultralytics import YOLO
 from pathlib import Path
 import tempfile
 # # Load models
-lp_model = YOLO("C:/AIoT/Server/License_Plate/weight/lp_detect/best.pt")     
-ocr_model = YOLO("C:/AIoT/Server/License_Plate/weight/ocr/best.pt")
+lp_model = YOLO("Your path : lisence plate detect best.pt")     
+ocr_model = YOLO("Your path : ocr best.pt")
 
 # # Mapping class ID → ký tự
 id2char = [

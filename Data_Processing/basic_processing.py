@@ -4,8 +4,9 @@ import os
 from datetime import datetime
 import numpy as np
 
+#Database 
 def init_firebase_db():
-    cred_db = credentials.Certificate("C:/AIoT/Server/Firebase/smart-parking.json")
+    cred_db = credentials.Certificate("your_path_.json_database")
     
     # init app với tên "db_app"
     app_db = firebase_admin.initialize_app(cred_db, name="db_app")
@@ -15,10 +16,10 @@ def init_firebase_db():
     return db
 
 def init_firebase_storage():
-    cred_storage = credentials.Certificate("C:/AIoT/Server/Firebase/storage.json")
+    cred_storage = credentials.Certificate("your_path_.json_storage")
     app_storage = firebase_admin.initialize_app(
         cred_storage,
-        {'storageBucket': "aiot-pac-742e6.firebasestorage.app"},
+        {'storageBucket': "your bucket in storage"},
         name="storage_app"
     )
 
