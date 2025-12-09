@@ -16,41 +16,13 @@ bucket = init_firebase_storage()
 db = init_firebase_db()
 doc_ref = db.collection("stats").document("car_count")
 
-# Folder save image download from firebase storage
 LOCAL_DIR = "downloads"
 os.makedirs(LOCAL_DIR, exist_ok=True)
 
 PORT = 5000
 app = Flask(__name__)
 
-# def get_all_images(download_dir="./downloads"):
-#     # Các định dạng ảnh cần lấy
-#     image_extensions = (".jpg", ".jpeg", ".png", ".bmp", ".gif", ".webp")
 
-#     # Kiểm tra thư mục tồn tại
-#     if not os.path.exists(download_dir):
-#         raise FileNotFoundError(f"Thư mục '{download_dir}' không tồn tại")
-
-#     # Lấy danh sách tất cả file ảnh
-#     return [
-#         os.path.join(download_dir, f)
-#         for f in os.listdir(download_dir)
-#         if f.lower().endswith(image_extensions)
-#     ]
-
-#download all images
-# def download_all_images():
-#     images = []
-#     blobs = bucket.list_blobs(prefix='data/')
-#     for blob in blobs:
-#         file_name = blob.name.split('/')[-1]
-#         if not file_name:
-#             continue
-#         local_path = os.path.join(LOCAL_DIR, file_name)
-#         blob.download_to_filename(local_path)
-#         print(f"[FIREBASE] Đã tải: {file_name}")
-#         images.append((local_path, blob))
-#     return images
 def download_all_images():
     images = []
     blobs = bucket.list_blobs(prefix='data/')
@@ -175,12 +147,12 @@ def programing_out() :
     for local_path, blob in img:
         try:
             blob.delete()
-            # xóa file local
-            # if os.path.exists(local_path):
-            #     os.remove(local_path)
-            # print(f"✅ Đã xóa: {blob.name}")
+            #xóa file local
+            if os.path.exists(local_path):
+                os.remove(local_path)
+            print(f"Xóa: {blob.name}")
         except Exception as e:
-            print(f"❌ Lỗi xóa {blob.name}: {e}")
+            print(f"Lỗi xóa {blob.name}: {e}")
     result = verify_users(p_ocr, face_embedding, face_url, plate_url)
 
     if result is True :

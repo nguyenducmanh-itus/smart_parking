@@ -22,35 +22,6 @@ os.makedirs(LOCAL_DIR, exist_ok=True)
 PORT = 5000
 app = Flask(__name__)
 
-def get_all_images(download_dir="./downloads"):
-    # Các định dạng ảnh cần lấy
-    image_extensions = (".jpg", ".jpeg", ".png", ".bmp", ".gif", ".webp")
-
-    # Kiểm tra thư mục tồn tại
-    if not os.path.exists(download_dir):
-        raise FileNotFoundError(f"Thư mục '{download_dir}' không tồn tại")
-
-    # Lấy danh sách tất cả file ảnh
-    return [
-        os.path.join(download_dir, f)
-        for f in os.listdir(download_dir)
-        if f.lower().endswith(image_extensions)
-    ]
-
-# #download all images
-# def download_all_images():
-#     images = []
-#     blobs = bucket.list_blobs(prefix='data/')
-#     for blob in blobs:
-#         file_name = blob.name.split('/')[-1]
-#         if not file_name:
-#             continue
-#         local_path = os.path.join(LOCAL_DIR, file_name)
-#         blob.download_to_filename(local_path)
-#         print(f"[FIREBASE] Đã tải: {file_name}")
-#         images.append((local_path, blob))
-#     return images
-
 def download_all_images():
     images = []
     blobs = bucket.list_blobs(prefix='data/')
@@ -169,7 +140,7 @@ def index():
 
  
 if __name__ == "__main__":
-    print(f"🚀 Server đang chạy trên 0.0.0.0:{PORT}")
+    print(f"Server đang chạy trên 0.0.0.0:{PORT}")
     app.run(host="0.0.0.0", port=PORT, debug=True)
 
     
