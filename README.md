@@ -15,13 +15,12 @@
 ### 1. Thực thi luồng vào
 ```bash
 python server_in.py
-### 2. Sửa lại Cú pháp theo Phong cách Ban đầu của Bạn
 
-Nếu bạn vẫn muốn sử dụng định dạng danh sách có dấu sao `*`, hãy đảm bảo lệnh `python` được đặt đúng cách và các khối mã được đóng/mở chuẩn xác:
+```
 
-```markdown
-## Các Bước Thực thi
+### 2. Thực thi luồng ra
+```bash
+python server_out.py
 
-* Thực thi luồng vào:
-  ```bash
-  python server_in.py
+```
+
