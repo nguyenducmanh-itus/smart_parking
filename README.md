@@ -13,8 +13,7 @@
 * Tạo các database và storage trên firebase và lấy các file .json của database và storage.
 * Đọc comment trong file Data_Processing/basic_processing.py để biết cách truyền đường dẫn file .json.
 * Thực thi luồng vào
-* ```php
-python server_in.py
+* ```php python server_in.py
+
 * Thực thi luồng ra
-python server_out.py
-```
+``` python server_out.py
