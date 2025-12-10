@@ -12,4 +12,4 @@
   - Sau khi tải về local đọc file License_Plate/plate_ocr.py để truyền trọng số.
 * Tạo các database và storage trên firebase và lấy các file .json của database và storage.
 * Đọc comment trong file Data_Processing/basic_processing.py để biết cách truyền đường dẫn file .json.
-* Chạy đoạn code server_in.py để kiểm tra luồng đi vào của xe và server_out để kiểm tra luồng xác thực.
+* Chạy lệnh echo ("python server_in.py") để kiểm tra luồng đi vào của xe và python server_out trong terminal để kiểm tra luồng xác thực.
