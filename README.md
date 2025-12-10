@@ -12,8 +12,16 @@
   - Sau khi tải về local đọc file License_Plate/plate_ocr.py để truyền trọng số.
 * Tạo các database và storage trên firebase và lấy các file .json của database và storage.
 * Đọc comment trong file Data_Processing/basic_processing.py để biết cách truyền đường dẫn file .json.
-* Thực thi luồng vào
-  ```php python server_in.py
+### 1. Thực thi luồng vào
+```bash
+python server_in.py
+### 2. Sửa lại Cú pháp theo Phong cách Ban đầu của Bạn
 
-* Thực thi luồng ra
-``` python server_out.py
+Nếu bạn vẫn muốn sử dụng định dạng danh sách có dấu sao `*`, hãy đảm bảo lệnh `python` được đặt đúng cách và các khối mã được đóng/mở chuẩn xác:
+
+```markdown
+## Các Bước Thực thi
+
+* Thực thi luồng vào:
+  ```bash
+  python server_in.py
